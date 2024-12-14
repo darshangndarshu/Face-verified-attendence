@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection and Attendance</title>
+    <link rel="stylesheet" href="crack.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1>Face Detection and Attendance System</h1>
+
+            <!-- Camera Section -->
+            <div class="camera-section">
+                <video id="video" autoplay></video>
+                <canvas id="canvas" style="display:none;"></canvas>
+                <div class="buttons">
+                    <button id="capture" class="btn">Capture Photo</button>
+                    <button id="send" class="btn" style="display:none;">Send Photo</button>
+                    <button id="compareButton" class="btn">Compare Images</button>
+                </div>
+                <div id="result" class="result"></div>
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="upload-section">
+                <form id="uploadForm">
+                    <h2>Upload Photos</h2>
+                    <input type="file" id="fileInput" class="file-input" />
+                    <button type="submit" class="btn">Upload</button>
+                </form>
+                <div id="responseMessage" class="response-message"></div>
+            </div>
+
+            <!-- Attendance Section -->
+            <div class="attendance-section">
+                <h2>Mark Attendance</h2>
+                <input type="text" id="markStudentId" placeholder="Enter Student ID" class="input-field" />
+                <button onclick="markAttendance()" class="btn">Mark Attendance</button>
+
+                <h2>Check Attendance</h2>
+                <input type="text" id="statusStudentId" placeholder="Enter Student ID" class="input-field" />
+                <button onclick="getAttendance()" class="btn">Check Status</button>
+                <h3>Timetable</h3>
+                <img src="timetable.jpg" alt="Timetable" width="600" height="400">
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="work.js"></script>
+</body>
+</html>
